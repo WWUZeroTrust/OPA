@@ -1,9 +1,9 @@
 import input
-import users.json
-import roles.json
+import Users.Users
+import roles.Roles
 
 default allow - false
-
+#https://github.com/open-policy-agent/opa/issues/1027
 # role-permissions assignments
 role_permissions := {
     "engineering":  [{"action": "read",  "object": "resource_1"}],
