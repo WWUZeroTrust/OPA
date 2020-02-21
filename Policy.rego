@@ -1,6 +1,6 @@
 import input
-import Users.Users
-import roles.Roles
+import Accounts.Users
+import Categories.Roles
 
 default allow - false
 #https://github.com/open-policy-agent/opa/issues/1027
@@ -11,8 +11,13 @@ role_permissions := {
 }
 
 # logic that implements RBAC.
-default allow = false
-allow {
-    user = Users[input.user]
-    role = 
+default username = false
+username {
+    Users.username[i] == input.user
 }
+
+default role = false
+role {
+    Roles[j].username == username
+}
+
