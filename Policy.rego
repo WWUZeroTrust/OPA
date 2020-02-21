@@ -13,7 +13,7 @@ role_permissions := {
 default username = false
 #Just grabs the usernames. Using this to varify the user exists in the API call
 account[username] { 
-    username = Users[_].username
+    username := Users[_].username
 }
 
 default permissions = false
