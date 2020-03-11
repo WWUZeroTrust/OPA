@@ -1,0 +1,1 @@
+curl -X POST http://localhost:8181/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "Sam", "access": "read", "object":"server123", "score":"90" } }'
