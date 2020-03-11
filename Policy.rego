@@ -1,4 +1,4 @@
-#works here
+package rbac.authz
 user_roles := {
     "Sam": ["engineering", "webdev"],
     "Scar": ["engineering", "webdev"],
